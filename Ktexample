@@ -1,0 +1,23 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mirea.kt.example;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author user
+ */
+public class Ktexample {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("РИБО-03-21, Лавриненко Элина, Вариант 2");
+        System.out.print("put' do fayla: ");
+        String filePath = scanner.nextLine();
+        Thread thread = new Thread(new DeserializeThread(filePath));
+        thread.start();
+    }
+}
